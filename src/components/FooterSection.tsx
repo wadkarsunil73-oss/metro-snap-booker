@@ -1,4 +1,4 @@
-import { Camera, Phone, Mail, MapPin } from "lucide-react";
+import { Camera, Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 const FooterSection = () => (
   <footer id="contact" className="py-16 bg-secondary border-t border-border">
@@ -25,6 +25,9 @@ const FooterSection = () => (
             <div className="flex items-start gap-2 text-sm text-muted-foreground font-body">
               <MapPin className="h-4 w-4 text-primary mt-0.5" /> Mumbai, Maharashtra
             </div>
+            <a href="https://www.instagram.com/vishal_gole_photography" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors font-body">
+              <Instagram className="h-4 w-4 text-primary" /> @vishal_gole_photography
+            </a>
           </div>
         </div>
         <div>
