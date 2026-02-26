@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import GallerySection from "@/components/GallerySection";
 import ServicesSection from "@/components/ServicesSection";
 import InstagramSection from "@/components/InstagramSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import FooterSection from "@/components/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import InquiryFormDialog, { type InquiryData } from "@/components/InquiryFormDialog";
@@ -56,6 +57,7 @@ const Index = () => {
       <HeroSection onBookNow={openBooking} />
       <ServicesSection />
       <GallerySection />
+      <TestimonialsSection />
       <InstagramSection />
       <FooterSection />
       <WhatsAppButton />
