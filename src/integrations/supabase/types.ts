@@ -126,32 +126,47 @@ export type Database = {
       }
       services: {
         Row: {
+          cover_image_url: string | null
           created_at: string
           description: string | null
+          gallery_images: Json | null
           icon: string | null
           id: string
+          packages: Json | null
           pricing: string | null
+          slug: string | null
           sort_order: number | null
+          summary: string | null
           title: string
           updated_at: string
         }
         Insert: {
+          cover_image_url?: string | null
           created_at?: string
           description?: string | null
+          gallery_images?: Json | null
           icon?: string | null
           id?: string
+          packages?: Json | null
           pricing?: string | null
+          slug?: string | null
           sort_order?: number | null
+          summary?: string | null
           title: string
           updated_at?: string
         }
         Update: {
+          cover_image_url?: string | null
           created_at?: string
           description?: string | null
+          gallery_images?: Json | null
           icon?: string | null
           id?: string
+          packages?: Json | null
           pricing?: string | null
+          slug?: string | null
           sort_order?: number | null
+          summary?: string | null
           title?: string
           updated_at?: string
         }
