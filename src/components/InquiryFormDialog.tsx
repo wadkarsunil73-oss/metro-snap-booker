@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -22,6 +22,7 @@ interface InquiryFormDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onSubmit: (data: InquiryData) => void;
+  defaultCategory?: string;
 }
 
 const shootCategories = [
@@ -35,15 +36,22 @@ const shootCategories = [
   "Event Photography",
 ];
 
-const InquiryFormDialog = ({ open, onOpenChange, onSubmit }: InquiryFormDialogProps) => {
+const InquiryFormDialog = ({ open, onOpenChange, onSubmit, defaultCategory }: InquiryFormDialogProps) => {
   const [form, setForm] = useState<Record<string, string>>({
     fullName: "",
     email: "",
     phone: "",
     whatsapp: "",
-    shootCategory: "",
+    shootCategory: defaultCategory || "",
     address: "",
   });
+
+  // Update category when defaultCategory changes
+  useEffect(() => {
+    if (defaultCategory) {
+      setForm((prev) => ({ ...prev, shootCategory: defaultCategory }));
+    }
+  }, [defaultCategory]);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleChange = (field: string, value: string) => {
